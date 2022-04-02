@@ -1,4 +1,13 @@
 terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "curioso-impertinente"
+
+    workspaces {
+      name = "rg-base-dev-francecentral"
+    }
+  }
+
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
