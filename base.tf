@@ -6,4 +6,5 @@ module "base" {
   environment = "dev"
   address_space = ["10.10.0.0/16"]
   dns_servers = ["168.63.129.16"]
+  tenant_id = data.azurerm_client_config.current.tenant_id
 }
